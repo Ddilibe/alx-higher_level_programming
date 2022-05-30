@@ -14,3 +14,4 @@ This project was done during the **Full Stack Software Engineering studies** at 
 | Filename | Description |
 | -------- | ----------- |
 | 0-run | A shell script that runs a python script using an environmental variable|
+| 1-run_inline | A script that runs a python code with inline python variable |
