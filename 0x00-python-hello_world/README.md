@@ -17,3 +17,4 @@ This project was done during the **Full Stack Software Engineering studies** at 
 | 1-run_inline | A script that runs a python code with inline python variable |
 | 2-print.py | A script that prints a string |
 | 3-print_number | A script to print integer stored in a variable |
+| 4-print_float | A script to print floats stored in a variable |
