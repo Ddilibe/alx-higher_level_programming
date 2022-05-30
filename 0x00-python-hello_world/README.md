@@ -18,3 +18,9 @@ This project was done during the **Full Stack Software Engineering studies** at 
 | 2-print.py | A script that prints a string |
 | 3-print_number | A script to print integer stored in a variable |
 | 4-print_float | A script to print floats stored in a variable |
+| 5-print_string | A script that pratices string slicing |
+| 6-concat | A scripts to illustrate string concatnation |
+| 7-edges | A script that takes sttring slicing to the next level |
+| 8-concat_edges | A scripts thst pratices string slicing and string concatenation |
+| 9-easter_egg | A script that prints out the Zen of python |
+| 10-check_cycle | A c script that checks if a singly linke list has a cycle in it |
