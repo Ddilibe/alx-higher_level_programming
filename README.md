@@ -13,4 +13,4 @@ All of the following folders are projects done during the studies:
 
 | Project name | Description |
 | ------------ | ----------- |
-| 0x00-Python-hello_world | [A introduction to a higher level programming language and how the synatx might be](https://github.com/Ddilibe/alx-higher_level_programming/tree/main/0x00-python-hello_world) |
+| [0x00-Python-hello_world](https://github.com/Ddilibe/alx-higher_level_programming/tree/main/0x00-python-hello_world) | A introduction to a higher level programming language and how the synatx might be |
