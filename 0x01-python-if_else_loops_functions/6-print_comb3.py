@@ -4,6 +4,6 @@ for i in range(0, 9):
     t+=1
     for j in range(t,10):
             if i == 8:
-                    print(f"{i}{j}")
+                    print("{}{}".format(i, j))
                     break
-            print(f"{i}{j}, ", end="")
+            print("{}{}, ".format(i, j), end="")
