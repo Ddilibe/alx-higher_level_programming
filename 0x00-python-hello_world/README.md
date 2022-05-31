@@ -24,3 +24,6 @@ This project was done during the **Full Stack Software Engineering studies** at 
 | 8-concat_edges | A scripts thst pratices string slicing and string concatenation |
 | 9-easter_egg | A script that prints out the Zen of python |
 | 10-check_cycle | A c script that checks if a singly linke list has a cycle in it |
+| 100-write.py | A script that prints exactly a string followed by a new line |
+| 101-complie | A script that compiles a python file |
+| 102-magic_calculation | A script that creates a python function replica of a python bytecode |
