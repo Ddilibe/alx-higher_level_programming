@@ -14,3 +14,4 @@ This project was done during the **Full Stack Software Engineering studies** at 
 | Filename | Description |
 | -------- | ----------- |
 | 0-positive_or_negative | A script to help identify the difference between positive, zero and negative numbers |
+| 1-last_digit | A script to print the last digit of a number stored in a variable |
