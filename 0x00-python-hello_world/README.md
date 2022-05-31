@@ -1,4 +1,4 @@
-#Python Hello World
+# Python Hello World
 
 This project was done during the **Full Stack Software Engineering studies** at **Holberton School**. The goal here is to introduce python, a higher programming language.
 
