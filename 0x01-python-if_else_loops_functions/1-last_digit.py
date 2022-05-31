@@ -9,8 +9,8 @@ else:
 print("Last digit of {} is {} and is ".format(number,last), end="")
 if last != 0:
     if last > 5:
-        print("greater that 5")
+        print("greater than 5")
     else:
-        print("less that 6 and not 0")
+        print("less than 6 and not 0")
 else:
     print("0")
