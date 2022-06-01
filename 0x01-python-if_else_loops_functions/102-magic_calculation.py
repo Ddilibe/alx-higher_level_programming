@@ -5,6 +5,3 @@ def magic_calculation(a, b, c):
 	if c > b:
 		return a + b
 	return a * b - c
-
-import dis
-dis.dis(magic_calculation)
