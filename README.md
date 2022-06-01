@@ -14,3 +14,4 @@ All of the following folders are projects done during the studies:
 | Project name | Description |
 | ------------ | ----------- |
 | [Python-hello_world](https://github.com/Ddilibe/alx-higher_level_programming/tree/main/0x00-python-hello_world) | A introduction to a higher level programming language and how the synatx might be |
+| [Python-if_else_loops_functions](https://github.com/Ddilibe/alx-higher_level_programming/tree/main/0x01-python-if_else_loops_functions) | A consice introduction to python functions, loops and different conditional statement |
