@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
+calculator_1
+add = __import__('calculator_1').add
+sub = __import__('calculator_1').sub
+
 a = 10
 b = 5
 print("{} + {} = {}".format(a, b, add(a, b)))
