@@ -11,17 +11,17 @@ def add_tuple(tuple_a=(), tuple_b=()):
     f = []
     for i in range(0, 2):
         f.append(tuple_a[i] + tuple_b[i])
-    return tuple(f)
+    return (tuple(f))
 
 def change_one(tupl):
     tupl = list(tupl)
     tupl.append(0)
     tupl = tuple(tupl)
-    return tupl
+    return (tupl)
 
 def change_two(tupl):
     tupl = list(tupl)
     for i in range(0,2):
         tupl.append(0)
     tupl = tuple(tupl)
-    return tupl
+    return (tupl)
