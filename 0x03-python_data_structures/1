@@ -1,0 +1,45 @@
+#include "lists.h"
+
+int is_palindrome(listint_t **head)
+{ 
+	int *ptr;
+	int p = 0, y = 0, r, e;
+	listint_t *current, *new_head;
+
+	current = new_head = *head;
+	ptr = malloc(sizeof(int));
+	while (current != NULL)
+	{
+		ptr[p] = current->n;
+		current = current->next;
+		p++;
+	}
+
+	for (r = 0, e = p; r <= p && e >= 0; r++, e++)
+	{
+		printf(" %d %d\n", ptr+r, ptr+e);
+		if (ptr[r] != ptr[e])
+		{
+			y = 1;
+			break;
+		}
+	}
+	free(ptr);
+	//checking_palindrome(new_head, p);
+	return (y);
+}
+
+//int checking_palindrome(listint_t *head, int p)
+//{
+	//int ptr[p], o = 0;
+	//listint_t *current;
+
+	//current = head;
+	
+	//for (o = 0; current != NULL; o++)
+	//{
+		//ptr + o = current->n;
+		//current = current->next;
+	//}
+	//return (0);
+//}
