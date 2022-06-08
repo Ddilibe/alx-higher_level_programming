@@ -1,7 +1,3 @@
 #!/usr/bin/python3
 def square_matrix_map(matrix=[]):
-    e = len(matrix)
-    matarix = list()
-    for i in range(e):
-        matarix.append(list(map(lambda x: x * x, matrix[i])))
-    return matarix
+    return [list(map(lambda x: x * x, i)) for i in matrix]
