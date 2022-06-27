@@ -63,12 +63,14 @@ class Rectangle:
 
     def __str__(self):
         """ Method that prints the rectangle with the character # """
-        for i in range(self.__height):
-            for i in range(self.__width):
-                print("#", end="")
-            print("")
-        return ("")
+        rectangle = ""
+        if self.width == 0 or self.height == 0:
+            return rectangle
 
+        for i in range(self.height):
+            rectangle += ("#" * self.width) + "\n"
+
+        return rectangle[:-1]
     def __repr__(self):
         """ Method to return a string representation of the rectangle """
         return ("Rectangle({}, {})".format(self.__width, self.__height))
