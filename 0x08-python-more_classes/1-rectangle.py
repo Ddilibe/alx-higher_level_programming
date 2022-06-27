@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+This module is composed by a class that defines a Rectangle
+"""
+
 class Rectangle:
     """ A rectangle class that defines a rectangle """
 
@@ -43,4 +47,3 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
-

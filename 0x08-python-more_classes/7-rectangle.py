@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 
+"""
+This module is composed by a class that defines a Rectangle
+"""
+
 class Rectangle:
-    """ A rectangle class that defines a rectangle 
-        
+    """ A rectangle class that defines a rectangle
         Public Class Attribute:
             number_of_inssances: recordes the number of instances
             print_symbol: Symbol for displaying the rectangle
-        
         Private Instance Attribute:
             width: The width of the rectangle
             height: The height of the rectangle
