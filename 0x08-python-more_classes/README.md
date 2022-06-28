@@ -3,10 +3,13 @@
 ## Aim
 
 # Questions and answers
-- Why Python programming is awesome
-- What is OOP
+- Why Python programming is awesome?
+	The answer to this question is particular with reference to the peroson. Python is awesome because the codes and the syntax is easy to learn
+- What is OOP?
+	OOP means Object oriented programming
 - “first-class everything”
-- What is a class
+- What is a class?
+	
 - What is an object and an instance
 - What is the difference between a class and an object or instance
 - What is an attribute

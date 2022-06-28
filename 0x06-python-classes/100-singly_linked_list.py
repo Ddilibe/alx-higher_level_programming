@@ -50,7 +50,7 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """ Method for inserting a new node in the correct sorted position"""
-        ptr = self.__head
+        ptr = self.head()
 
         while ptr is not None:
             if ptr.data > value:
@@ -76,3 +76,13 @@ class SinglyLinkedList:
             ptr = ptr.next_node
 
         return rtn
+
+    @property
+    def head(self):
+        """ Method for returning the value of the head """
+        return (self.__head)
+
+    @head.setter
+    def head(self, value):
+        """ Method for changing the value of the head"""
+        self.__head = value
