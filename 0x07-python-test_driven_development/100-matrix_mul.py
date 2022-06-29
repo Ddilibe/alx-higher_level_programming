@@ -16,6 +16,22 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_b can't be empty")
     if len(m_b[0]) == 0:
         raise ValueError("m_b can't be empty")
+    length = 0
+
+    for elems in m_a:
+        if length != 0 and length != len(elems):
+            raise TypeError("each row of m_a must be of the same size")
+        length = len(elems)
+
+    length = 0
+
+    for elems in m_b:
+        if length != 0 and length != len(elems):
+            raise TypeError("each row of m_b must be of the same size")
+        length = len(elems)
+
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
     new_matrix = []
     w = 0
     value = 0
