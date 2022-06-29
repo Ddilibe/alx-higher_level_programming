@@ -2,8 +2,10 @@
 """
     Module for the function prints a square
 """
+
+
 def print_square(size):
-    """ Function that prints a square"""
+    """Function that prints a square"""
     if type(size) == float and size < 0:
         raise TypeError("size must be an integer")
     if type(size) != int:

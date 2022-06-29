@@ -8,7 +8,7 @@ def text_indentation(text):
     for i in new_text:
         if len(going_to) == 0 and i in (" ", "  ", "        "):
             continue
-        if i in ('.', '?', ':'):
+        if i in (".", "?", ":"):
             going_to.append(i)
             going_to = "".join(going_to)
             add_text.append(str(going_to))
@@ -20,4 +20,3 @@ def text_indentation(text):
     going_to = []
     for i in add_text:
         print("{}\n".format(i))
-
