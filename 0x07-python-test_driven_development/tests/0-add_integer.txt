@@ -1,0 +1,37 @@
+""" 
+	Test for the function add_integer
+"""
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Adding an Integer
+
+>>> add_integer(1,2)
+3
+
+# Testing with an integer
+>>> add_integer(0.2, 0.93)
+0
+
+# Testing with a String on both sides
+>>> add_integer("234","weds")
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+# Testing with a String on side a
+>>> add_integer("234", 432)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
+
+# Testing with a String on side b
+>>> add_integer(234,"weds")
+Traceback (most recent call last):
+        ...
+TypeError: b must be an integer
+
+# Testing with a list on both sides
+>>> add_integer([1,2,3,4], 16)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
