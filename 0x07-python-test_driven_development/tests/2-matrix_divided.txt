@@ -1,0 +1,31 @@
+"""
+#Importing the function
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Testing using a string and a correct divisor
+>>> matrix_divided("this", 3)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Testing using a list of strings and a suitable divisor
+>>> matrix_divided(["a", "b", "c"], 3)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Testing Using a list of tuples and a suitable divisor
+>>> matrix_divided((1, 2, 3), 3)
+Traceback (most recent call last):
+	...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+#Testing with a list of list and a zero divisor
+>>> matrix_divided([[1, 2, 4], [2, 4, 6]], 0)
+Traceback (most recent call last):
+	...
+ZeroDivisionError: division by zero
+
+# Testing with a list of list and a suitable divisor
+>>> matrix_divided([[3], [3]], 3)
+[[1.0], [1.0]]

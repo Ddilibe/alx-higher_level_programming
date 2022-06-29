@@ -1,0 +1,32 @@
+"""
+	Test Module for the say my name function
+"""
+
+# Importing the function
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Passing a string as the first argument
+>>> say_my_name("Dilibe")
+My name is Dilibe 
+
+# Passing a string as the two arguments
+>>> say_my_name("Dilibe", "Fidelugwuowo")
+My name is Dilibe Fidelugwuowo
+
+# Passing an interger as the first argument
+>>> say_my_name(1234)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+# Passing a flost as the first argument
+>>> say_my_name(12.34)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+# Passing a None parameter as the first argument
+>>> say_my_name(None)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string

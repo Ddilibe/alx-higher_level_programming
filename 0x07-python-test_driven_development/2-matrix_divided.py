@@ -4,7 +4,11 @@
 """
 
 def matrix_divided(matrix, div):
-    """ Function that divides all elements of a matrix """
+    """ Function that divides all elements of a matrix
+        args:
+            @matrix: Lists of lists
+            @div: The divisor argument
+    """
     half = []
     whole = []
     if type(matrix) != list:

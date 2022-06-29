@@ -1,0 +1,36 @@
+"""
+	Module for the function text_indentation
+"""
+
+# Import the text function
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Passing a str type as an argument
+>>> text_indentation(str)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+# Passing a float type as an argument
+>>> text_indentation(float)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+# Passing a list type as an argument
+>>> text_indentation(list)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+# Passing a tuple type as an argument
+>>> text_indentation(tuple)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+# Passing a set as an argument
+>>> text_indentation({1,2,3})
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
