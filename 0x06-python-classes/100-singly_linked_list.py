@@ -7,12 +7,12 @@ class Node:
     """
     def __init__(self, data, next_node=None):
         """ Initialiazing the class blueprint"""
-        self.__data = data
         if type(data) != int:
             raise TypeError('data must be an integer')
-        self.__next_node = next_node
-        if type(self.__next_node) != Node and self.__next_node != None:
+        if type(next_node) != Node and next_node != None:
             raise TypeError('next_node must be a Node object')
+        self.__data = data
+        self.__next_node = next_node
 
     @property
     def data(self):
@@ -50,7 +50,7 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """ Method for inserting a new node in the correct sorted position"""
-        ptr = self.head()
+        ptr = self.head
 
         while ptr is not None:
             if ptr.data > value:
