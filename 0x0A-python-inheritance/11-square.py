@@ -12,9 +12,10 @@ class Square(Rectangle):
     """
     def __init__(self, size):
         """ Initializing the square class using a rectangle class """
-        super().__init__(size, size)
+        self.integer_validator("size", size)
         self.__size = size
+        super().__init__(self.__size, self.__size)
     
     def __str__(self):
         """ Method that describes a class """
-        return ("[Square] " + str(self.__size) + "/" + str(self.__size))
+        return ("[Square] {}/{}".format(self.__size, self.__size))

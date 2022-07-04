@@ -11,4 +11,6 @@ def inherits_from(obj, a_class):
     Function that declares if an object is inherited for
     (directly or indirectly) in a class
     """
-    return (issubclass(type(obj), a_class))
+    if type(obj) is a_class:
+        return False
+    return (isinstance(obj, a_class))

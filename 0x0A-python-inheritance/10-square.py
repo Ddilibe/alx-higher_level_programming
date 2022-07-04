@@ -12,4 +12,10 @@ class Square(Rectangle):
     """
     def __init__(self, size):
         """ Initializing the square class using a rectangle class """
-        super().__init__(size, size)
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(self.__size, self.__size)
+
+    def area(self):
+        """ Method that returns a string with the area"""
+        return super().area()
