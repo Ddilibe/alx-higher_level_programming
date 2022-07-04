@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+import sys
+d = sys.argv
+print(len(d), d)
+if len(d) == 4:
+    print(__import__(d[1]).__doc__)
+    print(__import__(d[1]).__class__.__doc__)
+    print(__import__(d[1]).d[2].d[3].__doc__)
+elif len(d) == 3:
+    print(__import__(d[1]).__doc__)
+    print(__import__(d[1]).d[2].__doc__)
+else:
+    pass
