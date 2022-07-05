@@ -1,0 +1,9 @@
+#!/bin/bash
+
+touch 101-stats.py
+touch 100-append_after.py
+touch 12-pascal_triangle.py
+touch 11-student.py
+touch 10-student.py
+touch 9-student.py
+touch 7-add_item.py
