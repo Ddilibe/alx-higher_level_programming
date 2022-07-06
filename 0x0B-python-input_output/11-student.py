@@ -21,7 +21,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """ Method that retreives a dictionary representation of a student """
-        if attrs != None:
+        if attrs is not None:
             new_dict = {}
             if type(attrs) == list:
                 for i in attrs:

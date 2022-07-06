@@ -18,6 +18,7 @@ def pascal_triangle(n):
             new_list = []
     return (major_list)
 
+
 def combination(x, y):
     """ Function used to implement combination in Mathematics """
     w = factorial(x - y)
@@ -26,9 +27,9 @@ def combination(x, y):
     ans = (x) / (y * w)
     return (ans)
 
+
 def factorial(x):
     """ Function used to implement factorial in Mathematics """
     if x == 1 or x == 0:
         return (1)
     return (x * factorial(x - 1))
-
