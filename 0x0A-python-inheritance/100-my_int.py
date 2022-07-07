@@ -8,7 +8,7 @@ class MyInt:
     """
         Defining a class
     """
-    def __init__(self, pl = 0):
+    def __init__(self, pl=0):
         """ Initializing the class with pl """
         self.pl = pl
 
