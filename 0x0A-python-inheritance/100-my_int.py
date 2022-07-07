@@ -14,11 +14,15 @@ class MyInt:
 
     def __eq__(self, other):
         """Return True if vector has same coordinates as other."""
-        return not self.pl == other
+        if type(other) == int:
+            return not self.pl == other
+        return not self.pl == other.pl
 
     def __ne__(self, other):
         """Return True if vector differs from other."""
-        return self.pl == other
+        if type(other) == int:
+            return self.pl == other
+        return self.pl == other.pl
 
     def __str__(self):
         """ Method for describing a class """
