@@ -5,6 +5,8 @@
 
 
 import json
+import csv
+import turtle
 
 
 class Base:
@@ -76,3 +78,56 @@ class Base:
                 w.append(q)
             return (w)
         return (list())
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Method that serializes content and saves it to CSV file """
+        with open("{}.csv".format(cls.__name__), "w", newline="") as f:
+            doing = csv.DictWriter(f, list_objs[0].to_dictionary().keys())
+            doing.writeheader()
+            for i in list_objs:
+                w = i.to_dictionary()
+                doing.writerow(w)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Method that creates instances of the class using deserializes
+        data from CSV data file """
+        q = []
+        with open("{}.csv".format(cls.__name__)) as f:
+            doing = csv.DictReader(f)
+            for i in doing:
+                for keys, values in i.items():
+                    if keys != "id":
+                        i[keys] = int(values)
+                w = cls.create(**i)
+                q.append(w)
+        return (q)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ Method that opens a window and draws all the rectangles
+        and squares """
+        w, q, f = turtle.Turtle(), 0, 0
+        color = ['blue', 'green', 'yellow', 'purple', 'violet', 'indigo', 'red']
+        all_list = [list_rectangles, list_squares]
+        for j in all_list:
+            for i in j:
+                w.setposition(i.x, i.y)
+                w.pendown()
+                w.color(color[f])
+                w.begin_fill()
+                while q < 2:
+                    w.forward(i.width)
+                    w.left(90)
+                    w.forward(i.height)
+                    w.left(90)
+                    q += 1
+                w.end_fill()
+                f += 1
+                if f == len(color):
+                    f = 0
+                f += 1
+                q = 0
+                w.penup()
+        turtle.mainloop()
