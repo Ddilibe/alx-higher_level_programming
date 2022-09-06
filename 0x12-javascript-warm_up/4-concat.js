@@ -1,4 +1,2 @@
 #!/usr/bin/node
-let a = process.argv[2] + ' is ';
-a = a + process.argv[3];
-console.log(a);
+console.log(process.argv[2] + ' is ' + process.argv[3]);

@@ -1,17 +1,13 @@
 #!/usr/bin/node
-const h = process.argv[2];
-let jane = [];
-if (!h) { console.log('Missing size'); }
-const man = 'X';
-let james = 1;
-let dude = 1;
-while (dude <= h) {
-  james = 0;
-  jane = [];
-  while (james <= h) {
-    jane.push(man);
-    james = james + 1;
+const size = parseInt(process.argv[2]);
+if (Number.isNaN(size)) {
+  console.log('Missing size');
+} else {
+  for (let i = 0, s; i < size; i++) {
+    s = '';
+    for (let j = 0; j < size; j++) {
+      s += 'X';
+    }
+    console.log(s);
   }
-  console.log(jane.join(''));
-  dude = dude + 1;
 }

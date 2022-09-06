@@ -1,14 +1,20 @@
 #!/usr/bin/node
-const tube = process.argv;
-const man = tube.length - 2;
-if (man === 0 || man === 1) { console.log(0); } else {
-  d = 0;
-  let dan = [];
-  while (d < man) {
-    dan.push(tube[d + 2]);
-    d = d + 1;
+
+let biggest = 0;
+let i;
+const arrayNumbers = [];
+
+for (i = 2; i < process.argv.length; i++) {
+  if (Number.isNaN(parseInt(process.argv[i])) === false) {
+    arrayNumbers[i - 2] = parseInt(process.argv[i]);
   }
-  dan = dan.sort();
-  dan = dan.reverse();
-  console.log(dan[1]);
 }
+
+if (arrayNumbers.length > 1) {
+  biggest = Math.max.apply(null, arrayNumbers);
+  i = arrayNumbers.indexOf(biggest);
+  arrayNumbers[i] = -Infinity;
+  biggest = Math.max.apply(null, arrayNumbers);
+}
+
+console.log(biggest);
