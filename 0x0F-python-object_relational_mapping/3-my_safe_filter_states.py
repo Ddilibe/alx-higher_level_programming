@@ -11,20 +11,20 @@ if __name__ == "__main__":
         "host": "localhost",
         "port": 3306,
         "user": vari[1],
-        "passwd": vari[2],
-        "db": vari[3],
+        "password": vari[2],
+        "database": vari[3],
         "charset": "utf8",
     }
-    conn = MySQLdb._mysql.connect(**instant)
+    conn = MySQLdb.connect(**instant)
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE '{}'\
-            ORDER BY states.id ASC".format(
-            vari[4]
+        "SELECT * FROM states WHERE name LIKE \
+           %s ORDER BY states.id ASC;",(
+            vari[4],
         )
     )
     query_rows = cur.fetchall()
-    for row in query_rows():
-        print("({}, '{}')".format(row.id, row.name))
+    for row in query_rows:
+        print(row)
     cur.close()
     conn.close()

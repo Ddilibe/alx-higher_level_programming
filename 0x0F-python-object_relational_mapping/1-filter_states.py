@@ -15,14 +15,14 @@ if __name__ == "__main__":
         "db": vari[3],
         "charset": "utf8",
     }
-    conn = MySQLdb._mysql.connect(**instant)
+    conn = MySQLdb.connect(**instant)
     cur = conn.cursor()
     cur.execute(
         "SELECT * FROM states WHERE name RLIKE\
             '^N' ORDER BY states.id ASC"
     )
     query_rows = cur.fetchall()
-    for row in query_rows():
-        print("({}, '{}')".format(row.id, row.name))
+    for row in query_rows:
+        print(row)
     cur.close()
     conn.close()
