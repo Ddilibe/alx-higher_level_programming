@@ -1,26 +1,20 @@
 #!/usr/bin/python3
 """
-    Module containing the class definition of State
+Contains State class and Base, an instance of declarative_base()
 """
-import sqlalchemy
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 
-Base = declarative_base()
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
+
+
 class State(Base):
     """
-        Class blueprint for the class definition of State
-        @args:
-            id: represents a column of auto-generated, unique Integers
-            name: represents a column of string with maximum 128 character
+    Class with id and name attributes of each state
     """
     __tablename__ = 'states'
-
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, unique=True, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
-    cities = relationship('City', backref='states')
-
-    def __repr__(self):
-        """ Method used for describing the class """
-        return "User<id='{}', name='{}'>".format(self.id, self.name)
+    cities = relationship("City", backref="states")
