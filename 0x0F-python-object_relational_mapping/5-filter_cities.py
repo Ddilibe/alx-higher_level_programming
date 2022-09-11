@@ -12,17 +12,16 @@ if __name__ == "__main__":
         "host": "localhost",
         "port": 3306,
         "user": vari[1],
-        "passwd": vari[2],
-        "db": vari[3],
+        "password": vari[2],
+        "database": vari[3],
         "charset": "utf8",
     }
-    conn = MySQLdb._mysql.connect(**instant)
+    conn = MySQLdb.connect(**instant)
     cur = conn.cursor()
     cur.execute("SELECT cities.name FROM cities, states\
-            where cities.state_id = state.id and state.name = '{}'\
-            ORDER BY cities.id ASC;".format(vari[4]))
+            where cities.state_id = states.id and states.name = %s\
+            ORDER BY cities.id ASC;", (vari[4],))
     query_rows = cur.fetchall()
-    for row in query_rows():
-        print("({}, '{}')".format(row.id, row.name))
+    print(", ".join(jam[0] for jam in query_rows))
     cur.close()
     conn.close()
