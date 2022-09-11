@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 """
-    Module that lists all the state objects from a database
+    Script that print the state object with the name passed as argument
 """
 
 import sys
-import sqlalchemy
-from sqlalchemy import create_engine
-from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
     engine = create_engine(
@@ -19,6 +18,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(instance.id, instance.name))
+    jame = session.query(State).filter(State.name == str(sys.argv[4])).first()
+    print(jame.id if jame else "Not Found")
     session.close()
