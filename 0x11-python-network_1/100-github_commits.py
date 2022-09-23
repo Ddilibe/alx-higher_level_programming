@@ -12,6 +12,7 @@ if __name__ == "__main__":
         format(sys.argv[1], sys.argv[2])
     req = requests.get(url)
     jam = req.json()
+    jam = jam[::-1]
     for k in range(10):
         sha = jam[k].get("sha")
         if "commit" in jam[k]:
