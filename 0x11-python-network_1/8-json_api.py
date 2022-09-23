@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Scrip that takes in a letter and sends a post request to 
+    Scrip that takes in a letter and sends a post request to
     https://0.0.0.0:5000/search_user with the letter as a
     parameter
 """

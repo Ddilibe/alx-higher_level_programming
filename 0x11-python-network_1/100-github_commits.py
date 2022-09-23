@@ -6,8 +6,11 @@
 if __name__ == "__main__":
     import sys
     import requests
+    import json
 
     url = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[1], sys.argv[2])
     req = requests.get(url)
     for keys in req.json():
-        print(req.json()[0]['sha'])
+        with open("jam", 'w') as k:
+            for i in req.json():
+               json.dump(k, json.load(i))
