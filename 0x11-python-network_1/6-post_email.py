@@ -9,4 +9,4 @@ if __name__ == "__main__":
     import requests, sys
     data = {"email":sys.argv[2]}
     got = requests.post(sys.argv[1], data=data)
-    print("Your email is: {}".format(got.text['form']['email']))
+    print("{}".format(got.text))
