@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Script thst tskes in a url, sends a request to the url 
+    Script thst tskes in a url, sends a request to the url
     and displays the body of the response
 """
 
